@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>To-Do List</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="todo">
+            <h2>To-Do List</h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+                <div class="select">
+                    <select name="todos" class="filter-todo">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="active">Active</option>
+                    </select>
+                </div>
+            </div>
+            <ul id="list-container" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <!--<li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>-->
+            </ul>
+        </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
